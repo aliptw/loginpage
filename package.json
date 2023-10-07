@@ -1,0 +1,14 @@
+{
+  "name": "griyanet",
+  "version": "1.0.0",
+  "description": "Hotspot Loginpage for GriyaNet",
+  "main": "md5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hotspot"
+  ],
+  "author": "Alif Thowaf",
+  "license": "ISC"
+}
