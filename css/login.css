@@ -26,6 +26,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: contain;
+    animation: loadingRight 0.5s ease-out;
 }
 
 .bgpict2 {
@@ -36,6 +37,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: contain;
+    animation: loadingLeft 0.5s ease-out;
 }
 
 
@@ -247,5 +249,39 @@ input {
         background-attachment: fixed;
         background-position: center;
         background-size: contain;
+    }
+}
+
+
+@keyframes loadingRight {
+    0% {
+        opacity: 0%;
+        margin-left: -100px;
+
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes loadingLeft {
+    0% {
+        opacity: 0%;
+        margin-right: -100px;
+
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+
     }
 }
