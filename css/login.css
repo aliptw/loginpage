@@ -1,21 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
 body {
-    padding: 0;
-    margin: 0 auto;
-    background-image: url('../img/fullimg.jpg');
+    /* padding: 0;
+    margin: 0 auto; */
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(22, 82%, 58%), hsl(22, 78%, 78%), hsl(24, 38%, 83%));
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-content: end;
+
+}
+
+.bgpict1 {
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/price.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: contain;
-
 }
 
-.gradient {
-    background-image: linear-gradient(to bottom right, hsl(hsl(22, 92%, 47%), hsl(22, 96%, 68%), hsl(22, 51%, 80%)));
+.bgpict2 {
     height: 100%;
     width: 100%;
-    position: relative;
-    z-index: 1;
+    background-image: url('../img/people.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
 }
+
+
 
 /* 
 #head {
@@ -31,35 +54,62 @@ body {
     top: 0px;
 } */
 
-legend {
+#loginbox {
     position: relative;
-    top: -37px;
-    color: #fff;
-    font-size: 18px;
-    font-family: sans-serif;
-
+    height: 100vh;
+    width: 30vw;
+    display: grid;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5vw;
+    margin-bottom: 30vh;
 }
 
-#box {
+#formbox {
     position: relative;
-    top: -37px;
-    width: 98%;
-    max-width: 650px;
-    height: 250px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    padding: 20px 0 0 0;
-    margin: 0px auto;
-
-
+    margin-inline: 1.5rem;
+    background-color: hsla(15, 100%, 99%, 0.2);
+    border: 4px solid hsla(22, 82%, 58%, 0.8);
+    padding: 2.5rem 1rem;
+    color: var(--white-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(1px);
+    height: 60vh;
+    margin-bottom: 30vh;
+    display: grid;
+    row-gap: 1.25rem;
+    place-items: center;
 }
 
+/* #login__user,
+#login__pass,
+#login__button {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    column-gap: .75rem;
+    align-items: center;
+    border: 2px solid hsla(22, 82%, 58%, 0.8);
+    padding-inline: 1.25rem;
+    border-radius: 4rem;
+} */
+/* 
+input {
+    height: 40px;
+    width: 230px;
+} */
 
 /**------------USER------------**/
+/* #login__user, */
+
+#user,
+#pass:active {
+    border: #fff;
+}
+
 #user {
     border: 0px #ccc solid;
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
+    background: hsla(22, 82%, 58%, 0.8);
     opacity: 1;
     height: 40px;
     font-size: 16px;
@@ -71,10 +121,11 @@ legend {
 }
 
 /**--------------------PASSWORD----------**/
+/* #login__pass, */
 #pass {
     border: 0px #ccc solid;
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
+    background: hsla(22, 82%, 58%, 0.8);
     opacity: 1;
     height: 40px;
     font-size: 16px;
@@ -87,10 +138,11 @@ legend {
 }
 
 /*---------------Boton---------*/
+/* #login__button, */
 #boton {
     -webkit-appearance: none;
     color: #fff;
-    background: #ff733c;
+    background: hsla(22, 82%, 58%, 1);
     background-image: url(../img/lock.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -107,12 +159,13 @@ legend {
     cursor: pointer
 }
 
-#boton:hover {
-    background-color: #03c7e4;
+#login__button:hover {
+    background-color: #ffffff;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .vertical-form .footer {
@@ -127,4 +180,72 @@ legend {
     color: #4285F4;
 }
 
-@media (max-width:450px) {}
+@media (max-width:950px) {
+    #loginbox {
+        height: 50vh;
+        width: 30vw;
+        margin-bottom: 30vh;
+        margin-right: 10vw;
+    }
+}
+
+@media (max-width:750px) {
+    #loginbox {
+        height: 30vh;
+        margin-bottom: 30vh;
+        margin-right: 15vw;
+    }
+
+    #user,
+    #pass,
+    #boton {
+        width: 190px;
+        height: 42px;
+        margin: auto;
+    }
+
+
+}
+
+@media (max-width:450px) {
+    #loginbox {
+        height: 100vh;
+        width: 100vw;
+        margin: auto;
+    }
+
+    #formbox {
+        height: 40vh;
+        width: 80vw;
+        margin: auto;
+    }
+
+    #user,
+    #pass,
+    #boton {
+        width: 150px;
+        height: 30px;
+        margin: auto;
+    }
+
+
+    .bgpict1 {
+        height: 100%;
+        width: 100%;
+        background-image: url('../img/priceport.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .bgpict2 {
+        height: 100%;
+        width: 100%;
+        background-image: url('../img/peopleport-removebg-preview.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+    }
+}
